@@ -7,6 +7,8 @@ def handler(event, context):
   operation = event.get("operation")
   if operation == "find_square":
     return find_square(list1)
+  elif operation == "find_reverse":
+    return find_reverse
   else:
     return {
 
@@ -20,4 +22,11 @@ def find_square(data):
         "find_square" : res
     }
 
-abc = "helo world"
+def find_reverse(data):
+  reverse_number = []
+  for i in reversed(data):
+    reverse_number.append(i)
+  
+  return {
+    "find_reverse" : reverse_number
+  }

@@ -19,3 +19,5 @@ def find_square(data):
     return {
         "find_square" : res
     }
+
+abc = "helo world"
